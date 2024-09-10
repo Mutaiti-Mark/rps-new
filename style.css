@@ -1,0 +1,76 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    height: 600px;
+    width: 500px;
+    border: 2px solid black;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.results{
+    border: 2px solid black;
+    height: 150px;
+    width: 450px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choices{
+    height: 150px;
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.choiceBox{
+    min-width: 200px;
+}
+
+.choiceBox .ChoiceDisplay{
+    border: 2px solid black;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choiceBox p{
+    text-align: center;
+    margin: 6px;
+}
+
+.choiceBox .roundDisplay{
+    border: 2px solid black;
+    margin: 0 40px;
+    min-height: 30px;
+    text-align: center;
+}
+
+.text{
+    font-size: 20px;
+    text-align: center;
+}
+
+.options{
+    height: 100px;
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    min-width: 120px;
+    border-radius: 20px;
+}

@@ -3,105 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script2.js" defer></script>
+    <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <script>
-        function getComputerChoice(){
+    <div class="container">
+        <div class="results">
 
-            let compChoiceNum = Math.floor(Math.random() *4)
-
-            let compChoice = ""
-
-            if (compChoiceNum == 0){
-                compChoice = "rock"
-            } else if (compChoiceNum == 1){
-                compChoice = "paper"
-            } else {
-                compChoice = "scissors"
-            }
-
-            return compChoice
-        }
-
-        function getHumanChoice(){
-            humanChoice = prompt("You choose?")
-
-            return humanChoice
-        }
-
-        
-        function playGame(){
-
-            let humanScore = 0
-            let compScore = 0
-
-            let yourChoice = getHumanChoice()
-            let computerChoice = getComputerChoice()
-
-            
-            function playRound(yourChoice, computerChoice){
-                // let yourChoice = youChoice.toLowerCase()
-
-                if (yourChoice == computerChoice){
-                    console.log("It is a TIE. Reload to try AGAIN")
-                } else if (yourChoice == "paper" && computerChoice == "rock") {
-                    console.log("You WIN! Paper beats Rock")
-                    humanScore++
-                } else if (yourChoice == "rock" && computerChoice == "scissors") {
-                    console.log("You WIN! Rock smashes scissors")
-                    humanScore++
-                } else if (yourChoice == "scissors" && computerChoice == "paper") {
-                    console.log("You WIN! Scissors cuts Paper")
-                    humanScore++
-                } else if (yourChoice == "rock" && computerChoice == "paper") {
-                    console.log("You LOSE! Paper beats Rock")
-                    compScore++
-                } else if (yourChoice == "scissors" && computerChoice == "rock") {
-                    console.log("You LOSE! Rock smashes scissors")
-                    compScore++
-                } else if (yourChoice == "paper" && computerChoice == "scissors") {
-                    console.log("You LOSE! Scissors cuts Paper")
-                    compScore++
-                } else {
-                    console.log(" Wrong INPUT")
-                }
-            }
-
-            playRound(yourChoice, computerChoice)
-
-            yourChoice = getHumanChoice()
-            computerChoice = getComputerChoice()
-
-            playRound(yourChoice, computerChoice)
-
-            yourChoice = getHumanChoice()
-            computerChoice = getComputerChoice()
-
-            playRound(yourChoice, computerChoice)
-
-            yourChoice = getHumanChoice()
-            computerChoice = getComputerChoice()
-
-            playRound(yourChoice, computerChoice)
-
-            yourChoice = getHumanChoice()
-            computerChoice = getComputerChoice()
-
-            playRound(yourChoice, computerChoice)
-
-            yourChoice = getHumanChoice()
-            computerChoice = getComputerChoice()
-
-            if (humanScore > compScore){
-                console.log("You win GAME")
-            } else {
-                console.log("You have LOST")
-            }
-        }
-
-        playGame()
-        
-    </script>
+        </div>
+        <div class="choices">
+            <div class="choiceBox">
+                <div class="ChoiceDisplay" id="humanDisplay"></div>
+                <p>YOU</p>
+                <div class="roundDisplay" id="humanRoundDisplay">0</div>
+            </div>
+            <div class="choiceBox">
+                <div class="ChoiceDisplay" id="compDisplay"></div>
+                <p>COMPUTER</p>
+                <div class="roundDisplay"id="compRoundDisplay">0</div>
+            </div>
+        </div>
+        <div class="text">
+            <p>Choose HERE</p>
+        </div>
+        <div class="options">
+            <button>rock</button>
+            <button>paper</button>
+            <button>scissors</button>
+        </div>
+    </div>
 </body>
 </html>
